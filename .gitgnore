@@ -1,0 +1,40 @@
+# File .gitignore per progetti Terraform
+
+# Cartella .terraform (contiene i plugin e lo stato locale)
+.terraform/
+**/.terraform/*
+
+# File di stato di Terraform (contengono dati sensibili)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# File di crash di Terraform
+crash.log
+crash.*.log
+
+# File di override (usati per override locali)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# File di configurazione personale di Terraform
+.terraformrc
+terraform.rc
+
+# File di pianificazione Terraform (terraform plan)
+*.tfplan
+terraform.tfplan
+
+# File di variabili con dati sensibili (es. password)
+*.tfvars
+*.tfvars.json
+
+# File di lock di Terraform (da valutare se escludere)
+# .terraform.lock.hcl  # Normalmente è consigliato commitarlo
+
+# File temporanei/backup generati da editor
+*.swp
+*.swo
+*.bak
